@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #34355B;
+    font-size: 62.5%;
+}
+
+.hide {
+    display: none;
+}
+
+body {
+    display: grid;
+    font-size: 1.6rem;
+    place-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #190361, #bb00ff);
+    animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+}    
+
+body, button {
+    font-family: "DM Sans", sans-serif;
+}
+
+main {
+    width: 428px;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+}
+
+.screen1, .screen2 {
+    padding: 4.8rem 6.4rem 6.4rem;
+    text-align: center;
+}
+
+.screen1 h1 {
+    color: var(--primary-color);
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2.9rem;  
+    margin-bottom: 1.4rem; 
+}
+
+.screen1 p {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+}
+
+.screen1 img:hover {
+    animation: vibrate-1 .3s linear infinite;
+}
+
+.screen2 {
+    height: 56.4rem;
+}
+
+.screen2 h2 {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    margin-bottom: 1.7rem;
+    color: var(--primary-color);
+}
+
+
+.screen2 .luck {
+    padding: 1rem;
+    background: #E4EDF1;
+    box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+    animation: slide-in-fwd-bottom .5s ease;
+    
+}
+
+.screen2 .luck p {
+    font-family: 'Dancing Script';
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    margin-bottom: 1.7rem;
+}
+
+.screen2 img {
+    margin-bottom: 1.7rem;
+}
+
+.screen2 button {
+    padding: 1.6rem;
+    background: #FF9500;
+    color: #FFF;
+    border-radius: 4px;
+    border: none;
+
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes vibrate-1 {
+    0% {
+        
+        transform: translate(0);
+    }
+    20% {
+        
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        
+        transform: translate(-2px, -2px);
+    }
+    60% {
+       
+        transform: translate(2px, 2px);
+    }
+    80% {
+      
+        transform: translate(2px, -2px);
+    }
+    100% {
+        
+        transform: translate(0);
+    }
+}
+
+@keyframes slide-in-fwd-bottom {
+    0% {
+     
+        transform: translateZ(-1400px) translateY(200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateZ(0) translateY(0);
+        opacity: 1;
+    }
+  }
+  
+  
